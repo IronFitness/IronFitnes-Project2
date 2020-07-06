@@ -32,7 +32,7 @@ Landing - Page example : https://www.strava.com/?hl=de
 
 Monday - 06/07/2020
 - find DB -> https://github.com/davejt/exercise; 
-- find a new DB
+- find a new DB this will give you a conflit
 - create homepage 
 - create with login
 
