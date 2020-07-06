@@ -19,14 +19,12 @@ Landing - Page example : https://www.strava.com/?hl=de
 Monday - 06/07/2020
 - find DB -> https://github.com/davejt/exercise; 
 - create homepage 
-- create with login 
-
+- create with login
 
 Tuesday - 07/08/2020 
 - create profil 
 - connect DB 
 - search workout 
-
 
 Wednesday - 08/08/2020 
 - up and down voting
