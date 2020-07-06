@@ -1,8 +1,23 @@
 # IronFitness - Project 2
 
 
+Planing: 
+Landing - Page example : https://www.strava.com/?hl=de
+
+- LandingPage & Singup 
+- HomePage -> LandingPage (after Login) // nav - my workout, new workout, all workouts, search // workout of the day - up & down voted 
+- Views: landing-Page, HomePage, MyWorkout-Page, newWorkout-Page, add-Workout, delete Workout, all workouts
+- routes:   landing -> HomePage
+            HomePage -> MyWorkout-Page & newWorkout-Page &  add-Workout & delete Workout & all workouts  
+            MyWorkout-Page -> HomePage
+            newWorkout-Page -> HomePage
+            add-Workout -> HomePage
+            delete Workout -> HomePage
+            HomePage -> Logout (landing-Page) 
+
+
 Monday - 06/07/2020
-- find DB 
+- find DB -> https://github.com/davejt/exercise; 
 - create homepage 
 - create with login 
 
@@ -27,4 +42,7 @@ Thursday - 09/08/2020
 
 Friday - 10/08/2020
 - Presentation 
+
+
+
 
