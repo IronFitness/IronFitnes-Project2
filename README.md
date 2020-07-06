@@ -1,5 +1,19 @@
 # IronFitness - Project 2
 
+Planing: 
+Landing - Page example : https://www.strava.com/?hl=de
+
+- LandingPage & Singup 
+- HomePage -> LandingPage (after Login) // nav - my workout, new workout, all workouts, search // workout of the day - up & down voted 
+- Views: landing-Page, HomePage, MyWorkout-Page, newWorkout-Page, add-Workout, delete Workout, all workouts
+- routes:   landing -> HomePage
+            HomePage -> MyWorkout-Page & newWorkout-Page &  add-Workout & delete Workout & all workouts  
+            MyWorkout-Page -> HomePage
+            newWorkout-Page -> HomePage
+            add-Workout -> HomePage
+            delete Workout -> HomePage
+            HomePage -> Logout (landing-Page) 
+         
 
 Planing: 
 Landing - Page example : https://www.strava.com/?hl=de
