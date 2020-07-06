@@ -11,6 +11,75 @@ mongoose.connect('mongodb://localhost/project2');
 
 const app = express();
 
+const flash = require('connect-flash');
+const session = require('express-session');
+const MongoStore = require('connect-mongo')(session);
+const db = mongoose.connection;
+app.use(
+  session({
+    secret: "mysecretstring",
+    cookie: { maxAge: 24 * 60 * 60 * 1000 },
+    saveUninitialized: false,
+    resave: false,
+    store: new MongoStore({
+      mongooseConnection: db,
+      ttl: 24 * 60 * 60 * 1000
+    })
+  })
+);
+
+//Passport Setup
+const User = require('./models/User');
+const passport = require('passport');
+const LocalStrategy = require('passport-local').Strategy;
+
+
+
+
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(flash());
+
+
+//const session = require('express-session');
+
+//serialize
+passport.serializeUser((user, done) => {
+  done(null,user._id);
+});
+
+passport.deserializeUser((id, done) => {
+  User.findById(id)
+  .then(dbUser => {
+    done(null,dbUser);
+  })
+  .catch(err => {
+    done(err);
+  });
+});
+
+passport.use(
+  new LocalStrategy((username, password, done) => {
+    User.findOne({ username: username})
+    .then(found => {
+      if(found === null) {
+        done(null, false, {message: "Wrong info" });
+      } else if (!bcrypt.compareSync(password, found.password)) {
+        done(null, false, {message: "Wrong info"});
+      } else {
+        done(null, found);
+      }
+    })
+    .catch(err => {
+      done(err, false);
+    });
+  })
+);
+
+
+
+
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
@@ -28,6 +97,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 const index = require('./routes/index');
 app.use('/', index);
+
+const auth = require('./routes/auth');
+app.use('/', auth);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
