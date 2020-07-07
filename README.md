@@ -51,6 +51,7 @@ Thursday - 09/08/2020
 - Design 
 - finetuning -> profil, img, sport direction
 - Beginner || advance || random 
+- Deploy on Heroku
 
 
 Friday - 10/08/2020

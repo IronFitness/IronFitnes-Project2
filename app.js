@@ -8,8 +8,9 @@ const bodyParser   = require('body-parser');
 const mongoose     = require('mongoose');
 
 
+mongoose.connect('mongodb://localhost/IRONFIRNES-PROJECT2');
 
-mongoose.connect('mongodb://localhost/project2');
+
 
 const app = express();
 
@@ -136,6 +137,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 const index = require('./routes/index');
 app.use('/', index);
+
+const workouts = require('./routes/workouts');
+app.use('/', workouts);
+
 
 const auth = require('./routes/auth');
 app.use('/auth', auth);
