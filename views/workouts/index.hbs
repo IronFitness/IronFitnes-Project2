@@ -10,6 +10,12 @@
 <h2>{{this.exercise}}</h2>
 <p><a href="/workouts/{{ this._id }}">See Details</a></p>
 
+<div class="vote">
+        <div class="up" @click="upVote"></div>
+        <div class="votes">{{ voteCount }}</div>
+        <div class="down" @click="downVote"></div>
+      </div>
+
 </div>
 {{/each}}
 

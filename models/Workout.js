@@ -7,7 +7,8 @@ const workoutSchema = new Schema({
     repetitions: Number,
     muscle: String,
     videoUrl: String,
-    description: String
+    description: String,
+    voting: Number 
 })
 
 const Workout = mongoose.model('Workout', workoutSchema);

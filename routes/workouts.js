@@ -14,7 +14,7 @@ router.get('/workouts', (req, res, next) => {
 
 router.post('/workouts/new', (req, res, next) => {
     const { exercise, difficulty, repetitions, muscle, description } = req.body;
-    Workout.create({ exercise, difficulty, repetitions, muscle, description })
+    Workout.create({ exercise, difficulty, repetitions, muscle, description, voting: 0 })
         .then((newWorkout) => {
             res.redirect(`/workouts/${newWorkout._id}`);
         })
@@ -54,6 +54,9 @@ router.post('/workouts/delete/:id', (req, res, next) => {
 router.get('/new', (req, res, next) => {
     res.render('workouts/new');
 });
+
+// <!-- routes or Worout voting --> 
+
 
 module.exports = router;
 

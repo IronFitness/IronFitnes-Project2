@@ -33,9 +33,6 @@ const workouts = require('./routes/workouts');
 app.use('/', workouts);
 
 
- const profil = require('./routes/profils');
- app.use('/', profil);
-
 
 
 // catch 404 and forward to error handler
