@@ -6,6 +6,9 @@ const userSchema = new Schema({
     username: String,
     password: String,
     githubId: String,
+    weight: Number,
+    Size: Number,
+    Age: Number,
     role: {
         type: String,
         enum: ['Coach', 'Trainee'],

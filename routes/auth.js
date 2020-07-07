@@ -24,6 +24,17 @@ router.post(
 );
 
 
+// github authentication routing
+router.get('/github', passport.authenticate('github'));
+
+router.get(
+  '/github/callback',
+  passport.authenticate('github', {
+    successRedirect: '/',
+    failureRedirect: '/auth/login',
+  })
+);
+
 // //Login 
 // User.create({ username: username, password: hash })
 // .then (dbUser => {
@@ -81,10 +92,21 @@ router.get('/login', (req, res) => {
     res.render('auth/login', {errorMessage:req.flash('error')});
 });
 
-router.get('logout', (req, res, next) => {
+router.get('/Logout', (req, res, next) => {
     req.logout();
     res.redirect('/');
 });
 
+router.get('/github', passport.authenticate('github'));
+
+router.get('/github/callback',
+passport.authenticate('github', {
+    successRedirect:'/',
+    failureRedirect: '/auth/login'
+})
+);
+
 
 module.exports=router;
+
+
