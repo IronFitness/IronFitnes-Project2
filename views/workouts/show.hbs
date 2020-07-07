@@ -7,6 +7,12 @@
 <p> Description: {{ workouts.description }} </p>
 </div>
 
+
+    <form action="/workouts/delete/{{ workouts._id }}" method="POST">
+    <button type="submit">Delete</button>
+    </form>
+
+
 <p> <a href="/workouts">Back to Workouts</a> </p>
 
 
