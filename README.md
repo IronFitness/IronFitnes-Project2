@@ -32,7 +32,7 @@ Landing - Page example : https://www.strava.com/?hl=de
 
 Monday - 06/07/2020
 - find DB -> https://github.com/davejt/exercise; 
-- find a new DB this will give you a conflit
+- find a new DB or create your own DB
 - create homepage 
 - create with login
 
@@ -51,6 +51,7 @@ Thursday - 09/08/2020
 - Design 
 - finetuning -> profil, img, sport direction
 - Beginner || advance || random 
+- Deploy on Heroku
 
 
 Friday - 10/08/2020
