@@ -1,0 +1,35 @@
+<form id="form" action="/auth/signup" method="POST">
+
+  <label for="username">Username</label><br />
+  <input type="text" name="username" />
+
+<br> 
+  <label for="password">Password</label><br />
+  <input type="password" name="password" />
+  <br> 
+  <label for="weight">Weight</label><br />
+  <input type="number" name="weight" />
+  <br> 
+  <label for="size">Size</label><br />
+  <input type="number" name="size" />
+    <br>
+    <br>
+    <label for="level">Workout-level</label> 
+    <select id="level" name="level" form="level">
+    <option value="Beginner">Beginner</option>
+    <option value="Intermediate">Intermediate</option>
+    <option value="Professional">Professional</option>
+    </select>
+
+
+  {{#if message}}
+  <div class="error-message">{{message}}</div>
+  {{/if}}
+
+<br>
+<br>
+  <button type="submit">Sign up</button>
+</form>
+
+<br>
+<a href="/">Login</a>

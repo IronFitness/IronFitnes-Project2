@@ -1,2 +1,14 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<h1>Welcome to IronFitness</h1>
+<p> Welcome {{#if user}}{{user.username}}{{/if}} </p>
+<p>Sign up for free and create your own workout, get inspired by others and motivate yourself!</p>
+
+<a href="/auth/logout">Logout</a>
+
+
+{{!-- {{#unless user}}}
+<a href="/auth/signup"> Sign Up</a>
+<a href="/auth/login"> Login</a>
+
+{{else}}
+<button href="auth/logout"> Logout</button>
+{{/unless}} --}}
