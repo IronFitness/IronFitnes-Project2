@@ -1,0 +1,38 @@
+<h2>Add a new Workout</h2>
+
+<form action="/workouts/new" method="POST"\>
+  <label for="exercise">Exercise</label> 
+  <input id="exercise" type="text" name="exercise">
+  
+  <label for="difficulty">Difficulty</label> 
+<select id="difficulty" name="difficulty" form="difficulty">
+  <option value="easy">easy</option>
+  <option value="medium">medium</option>
+  <option value="hard">hard</option>
+</select>
+
+  <input id="difficulty" type="text" name="difficulty">
+  
+  <label for="repetitions">repetitions</label> 
+  <input id="repetitions" type="number" name="repetitions">
+  
+    <label for="muscle">Workout-type</label> 
+    <select id="difficulty" name="difficulty" form="difficulty">
+    <option value="chest">Chest</option>
+    <option value="arms">Arms</option>
+    <option value="upper-back">Upper-back</option>
+    <option value="lower-back">Lower-back</option>
+    <option value="ABS">ABS</option>
+    <option value="legs">Legs</option>
+    <option value="calves">Calves</option>
+    </select>
+
+    <label for="description">Description</label> 
+     <input id="description" type="text" name="description">
+
+
+  <button type="submit">Add</button>
+</form>
+
+
+
