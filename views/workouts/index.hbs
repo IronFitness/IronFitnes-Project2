@@ -1,0 +1,26 @@
+<div class="workoutspage">
+
+<h2>Workouts</h2>
+
+</div>
+
+
+<div class="wourkoutTemp">
+{{#each workouts}}
+<div class="inlineTemp">
+<h2>{{this.exercise}}</h2>
+<p><a href="/workouts/{{ this._id }}">See Details</a></p>
+</div>
+{{/each}}
+
+
+</div>
+
+
+
+<br>
+<br>
+
+<p><a href="/">Back Home</a> </p>
+<p> <a href="/new">New Workout</a> </p>
+

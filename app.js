@@ -7,7 +7,7 @@ const bodyParser   = require('body-parser');
 const mongoose     = require('mongoose');
 
 
-mongoose.connect('mongodb://localhost/project2');
+mongoose.connect('mongodb://localhost/IRONFIRNES-PROJECT2');
 
 const app = express();
 
@@ -28,6 +28,15 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 const index = require('./routes/index');
 app.use('/', index);
+
+const workouts = require('./routes/workouts');
+app.use('/', workouts);
+
+
+ const profil = require('./routes/profils');
+ app.use('/', profil);
+
+
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
