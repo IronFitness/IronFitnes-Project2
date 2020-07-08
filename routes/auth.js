@@ -1,11 +1,9 @@
 const express = require('express');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 
 const router = express.Router();
 const User = require('../models/User');
 const passport = require('passport');
-
-
 
 router.get('/signup', (req, res) => {
     // console.log("hello");

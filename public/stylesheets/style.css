@@ -1,6 +1,8 @@
-* {
+.navbar {
   transition: 0.4s;
 }
+
+ 
 
 body {
   padding: 0px;
@@ -93,5 +95,3 @@ body {
 }
 
 
-
-/* Voting - System */

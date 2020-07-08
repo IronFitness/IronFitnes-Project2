@@ -3,9 +3,11 @@ const router = express.Router();
 const Workout = require('../models/Workout');
 
 router.get('/workouts', (req, res, next) => {
+    console.log("workouts user", req.user);
+    const user = req.user;
     Workout.find().then(workouts => {
         // console.log(workouts);
-        res.render('workouts/index.hbs', { workouts });
+        res.render('workouts/index.hbs', { workouts, user });
     })
         .catch(err => {
             next(err);
@@ -24,9 +26,11 @@ router.post('/workouts/new', (req, res, next) => {
 })
 
 router.get('/workouts/:id', (req, res, next) => {
+    console.log("workouts user", req.user);
+    const user = req.user;
     Workout.findById(req.params.id)
         .then(workouts => {
-            res.render('workouts/show.hbs', { workouts });
+            res.render('workouts/show.hbs', { workouts, user });
         })
         .catch(err => {
             next(err);
@@ -34,8 +38,10 @@ router.get('/workouts/:id', (req, res, next) => {
 });
 
 router.get('/workouts/:id/edit', (req, res, next) => {
+    console.log("edit user!!!!!! ", req.user);
+    const user = req.user;
     Workout.findById(req.params.id)
-        .then(workouts => res.render('workouts/edit', {workouts}))
+        .then(workouts => res.render('workouts/edit', {workouts, user }))
         .catch(error => next())
 })
 
@@ -52,7 +58,9 @@ router.post('/workouts/delete/:id', (req, res, next) => {
 
 
 router.get('/new', (req, res, next) => {
-    res.render('workouts/new');
+    console.log("edit user!!!!!! ", req.user);
+    const user = req.usçer;
+    res.render('workouts/new' , {user});
 });
 
 // <!-- routes or Worout voting --> 
