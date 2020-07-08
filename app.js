@@ -80,6 +80,7 @@ passport.use(
   })
 );
 
+
 console.log(process.env.SESSION_SECRET)
 //Github Login 
 const GithubStrategy = require('passport-github').Strategy;
