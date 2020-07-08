@@ -5,6 +5,15 @@
 <p>Worksout: {{ workouts.repetitions }}  </p>
 <p> Mulcle:  {{ workouts.muscle }} </p>
 <p> Description: {{ workouts.description }} </p>
+<p id="voting">Voting: <span>{{ workouts.voting }}</span></p>
+
+
+<button class="upVote" id={{workouts._id}} voting={{workouts.voting}}>Up </button>
+
+    <button class="downVote" id={{workouts._id}} voting={{workouts.voting}}>Down</button>
+
+
+
 </div>
 
 
@@ -12,7 +21,45 @@
     <button type="submit">Delete</button>
     </form>
 
-<p> <a href="/workouts">Back to Workouts</a> </p>
+
+
+
+{{!-- Voting functionality --}}
+
+
+
+<script>
+  // Button for Voting Up
+document.querySelector(".upVote").onclick=(e)=>{
+  console.log("cheese is awsome")
+  let id=e.target.id
+  //axios
+  axios.post(`/vote/${id}`).then(response=>{
+let votingNumber=document.querySelector("#voting >span").innerText
+let newNumber=parseFloat(votingNumber)+1    
+document.querySelector("#voting >span").innerText=newNumber
+
+console.log(response)
+  })
+}
+
+// Button for Down Voting
+
+document.querySelector(".downVote").onclick=(e)=>{
+  console.log("cheese is down-awsome")
+  let id=e.target.id
+  //axios
+  axios.post(`/vote/${id}`).then(response=>{
+let votingNumber=document.querySelector("#voting >span").innerText
+let newNumber=parseFloat(votingNumber)-1    
+document.querySelector("#voting >span").innerText=newNumber
+
+console.log(response)
+  })
+}
+
+
+</script>
 
 
 

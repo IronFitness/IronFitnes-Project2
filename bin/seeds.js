@@ -14,6 +14,7 @@ const initialworkouts = [
         repetitions: 10,
         muscle: `Bizeps`,
         description: `slow execution`,
+        voting: 0,
     },
 
     {
@@ -22,6 +23,7 @@ const initialworkouts = [
         repetitions: 12,
         muscle: `back muscle `,
         description: `slowly down until the arms are stretched out and explosive up again`,
+        voting: 0,
     },
 
     {    
@@ -29,7 +31,8 @@ const initialworkouts = [
         difficulty: 'hard',
         repetitions: 8,
         muscle: `Pectoral muscle`,
-        description: `lead the rod landsam to the chest and push it up again explosively`
+        description: `lead the rod landsam to the chest and push it up again explosively`,
+        voting: 0
     }
 ]
 
