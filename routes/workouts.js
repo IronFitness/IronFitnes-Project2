@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Workout = require('../models/Workout');
+const { default: Axios } = require('axios');
 
 router.get('/workouts', (req, res, next) => {
     console.log("workouts user", req.user);
@@ -59,12 +60,30 @@ router.post('/workouts/delete/:id', (req, res, next) => {
 
 router.get('/new', (req, res, next) => {
     console.log("edit user!!!!!! ", req.user);
-    const user = req.usçer;
+    const user = req.user;
     res.render('workouts/new' , {user});
 });
 
 // <!-- routes or Worout voting --> 
 
+router.post("/vote/:id", (req, res) => {
 
-module.exports = router;
+    res.send(req.params.something)
+    // console.log("+1")
+    // console.log(req.params.id)
+    Workout.findByIdAndUpdate(req.params.id, { $inc: { voting : 1 } } ,{new:true}).then( (post) => { 
+    
+     console.log("post", post);
 
+     })
+  })
+  router.post("/vote/:id", (req, res) => {
+      res.send(req.params.something)
+    Workout.findByIdAndUpdate(req.params.id, { $inc: { score: -1 } }, { new: true }).then(post => {
+      
+        console.log("post", post);
+    })
+  })
+  
+
+  module.exports = router;
