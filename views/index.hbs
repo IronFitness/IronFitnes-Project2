@@ -14,12 +14,12 @@
 <p> Welcome {{#if user}}{{user.username}}{{/if}} </p>
 </div>
 
-<div class="welDiv2">
-<p>
+<div class="welDiv2 marwelDiv2">
 <h3>Hey {{user.username}}, here are yourlisted workouts:</h3>
-</p>
+</div>
+
    
-   
+<div class="welDiv">
 {{#each user.list}}
 <a href="/workouts/{{this.id}}"> <p>{{this.exercise}}</a> 
 {{/each}}
