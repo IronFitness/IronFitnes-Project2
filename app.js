@@ -8,9 +8,8 @@ const bodyParser   = require('body-parser');
 const mongoose     = require('mongoose');
 const bcrypt = require('bcryptjs');
 
-// mongoose.connect('mongodb://localhost/IRONFIRNES-PROJECT2');
+mongoose.connect(process.env.MONGODB_URI || /*'mongodb://heroku_jl0vc8f0:m5r4nhcibtrpj5vj91ie4aopdr@ds141783.mlab.com:41783/heroku_jl0vc8f0' || */ 'mongodb://localhost/IRONFIRNES-PROJECT2');
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://heroku_jl0vc8f0:m5r4nhcibtrpj5vj91ie4aopdr@ds141783.mlab.com:41783/heroku_jl0vc8f0');
 
 
 const app = express();
