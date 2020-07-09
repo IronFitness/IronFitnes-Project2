@@ -21,7 +21,11 @@
    
 <div class="welDiv">
 {{#each user.list}}
-<a href="/workouts/{{this.id}}"> <p>{{this.exercise}}</a> 
+
+   <a style="text-decoration: none; color: black;" href="/workouts/{{this.id}}"> <p>{{this.exercise}}</p></a>
 {{/each}}
+<a style="text-decoration: none; color: black;" href="/auth/logout">Logout</a>
+
+
 
 </div>

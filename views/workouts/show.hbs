@@ -1,11 +1,10 @@
-<h2>Workout Details</h2>
-
+<h2>Exercise Details</h2>
 <div>
 <p>Name: {{ workouts.exercise }} </p>
 <p>Difficulty: {{ workouts.difficulty }}  </p>
-<p>Worksout: {{ workouts.repetitions }}  </p>
-<p> Mulcle:  {{ workouts.muscle }} </p>
-<p> Description: {{ workouts.description }} </p>
+<p>Repetitions: {{ workouts.repetitions }}  </p>
+<p>Muscle-Group:  {{ workouts.muscle }} </p>
+<p>Description: {{ workouts.description }} </p>
 <p id="voting">Voting: <span>{{ workouts.voting }}</span></p>
 
 
@@ -19,9 +18,10 @@
     <form action="/workouts/delete/{{ workouts._id }}" method="POST">
     <button type="submit">Delete</button>
     </form>
+
+<button>  <a style="text-decoration: none; color: black;" href="/workouts"> Back to Workouts</a>  </button>
+
 </div>
-
-
 
 {{!-- Voting functionality --}}
 
@@ -57,6 +57,9 @@ console.log(response)
   })
 }
 
+
+// Button going to Workouts page
+ 
 
 </script>
 

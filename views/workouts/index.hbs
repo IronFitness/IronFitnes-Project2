@@ -12,12 +12,16 @@
         <form action="/workouts" method="POST">
         
         <h2>{{this.exercise}}</h2>
-        <p><a href="/workouts/{{ this._id }}">See Details</a></p>
+        <p><a class="links" style="text-decoration: none; color: black;"  href="/workouts/{{ this._id }}">See Details</a></p>
 
         <input type="text" name="exercise" value="{{this.exercise}}" style= "display:none">
         <input type="text" name="id" value="{{ this._id }}" style= "display:none">
        
-       <p id="voting"> Likes: <span> {{ this.voting }}</span></p>
+
+        <label class="workoutType" for="muscle">Muscle-Group: <span>{{ this.muscle }}</span></label> 
+        <p id="voting"> Likes: <span>{{ this.voting }}</span></p>
+
+       
         <button type="submit" class="toWorkout">Add to workout</button>
         </form>
   
@@ -28,6 +32,6 @@
 </div>
 
 
-<p><a href="/">Back Home</a> </p>
-<p> <a href="/new">New Workout</a> </p>
+<p><a style="text-decoration: none; color: black;" href="/">Back Home</a> </p>
+<p> <a style="text-decoration: none; color: black;" href="/new">New Workout</a> </p>
 
