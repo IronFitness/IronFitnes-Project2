@@ -4,10 +4,18 @@
 <h1>Welcome to IronFitness</h1>
 
 <p>Sign up for free and create your own workout, get inspired by others and motivate yourself!</p>
+<<<<<<< HEAD
 <div>
 
 
 
+=======
+
+{{#each user.list}}
+   <a href="/workouts/{{this.id}}"> <p>{{this.exercise}}</p></a>
+{{/each}}
+<a href="/auth/logout">Logout</a>
+>>>>>>> 3d4f7c1d4f2f8244fa3f6a1a551b416edbc8da23
 
 
 <div class="welDiv">
