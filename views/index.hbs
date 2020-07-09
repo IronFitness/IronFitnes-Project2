@@ -5,8 +5,8 @@
 <p> Welcome {{#if user}}{{user.username}}{{/if}} </p>
 <p>Sign up for free and create your own workout, get inspired by others and motivate yourself!</p>
 {{#each user.list}}
-   <a href="/workouts/{{this.id}}"> <p>{{this.exercise}}</p></a>
+   <a style="text-decoration: none; color: black;" href="/workouts/{{this.id}}"> <p>{{this.exercise}}</p></a>
 {{/each}}
-<a href="/auth/logout">Logout</a>
+<a style="text-decoration: none; color: black;" href="/auth/logout">Logout</a>
 
 
