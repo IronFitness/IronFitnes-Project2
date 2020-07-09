@@ -4,9 +4,10 @@
 <h1>Welcome to IronFitness</h1>
 
 <p>Sign up for free and create your own workout, get inspired by others and motivate yourself!</p>
-<div>
 
-
+{{#each user.list}}
+   <a href="/workouts/{{this.id}}"> <p>{{this.exercise}}</p></a>
+{{/each}}
 
 
 
@@ -23,7 +24,7 @@
 {{#each user.list}}
    <a style="text-decoration: none; color: black;" href="/workouts/{{this.id}}"> <p>{{this.exercise}}</p></a>
 {{/each}}
-<a style="text-decoration: none; color: black;" href="/auth/logout">Logout</a>
+
 
 
 </div>

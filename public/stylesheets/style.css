@@ -53,6 +53,8 @@ body {
   align-items: center;
 }
 
+
+
 .inlineTemp{
   width: 200px;
   height: 150px;
@@ -322,4 +324,12 @@ body {
 .welDiv2 {
   display: flex;
   justify-content: center;
+}
+
+
+
+/* workuts view */
+
+.bWork { 
+ margin-left: 310px ;
 }

@@ -4,28 +4,35 @@
 
 </div>
 
-<div class="wourkoutTemp">
+
+<div >
+<div class="wourkoutTemp" >
  
           
         {{#each workouts}}
         <div class="inlineTemp grow">
         <form action="/workouts" method="POST">
         
-        <h2>{{this.exercise}}</h2>
-        <p><a class="links" style="text-decoration: none; color: black;"  href="/workouts/{{ this._id }}">See Details</a></p>
+        <h2 style="text-align: center;">{{this.exercise}}</h2>
+        <p style="text-align: center;"><a class="links" style="text-decoration: none; color: black;"  href="/workouts/{{ this._id }}">See Details</a></p>
 
         <input type="text" name="exercise" value="{{this.exercise}}" style= "display:none">
         <input type="text" name="id" value="{{ this._id }}" style= "display:none">
        
-        <label class="workoutType" for="muscle">Muscle-Group: <span>{{ this.muscle }}</span></label> 
-        <p id="voting"> Likes: <span>{{ this.voting }}</span></p>
-        <button type="submit" class="toWorkout">Add to workout</button>
+
+        <label class="bWork"   class="workoutType" for="muscle">Muscle-Group: <span>{{ this.muscle }}</span></label> 
+        <p style="text-align: center;" id="voting"> Likes: <span>{{ this.voting }}</span></p>
+
+       
+        <button class="bWork" type="submit" class="toWorkout">Add to workout</button>
+
         </form>
   
         </div>
         
         {{/each}}
         
+</div>
 </div>
 
 
