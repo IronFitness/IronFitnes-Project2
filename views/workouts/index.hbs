@@ -8,8 +8,6 @@
  
           
         {{#each workouts}}
-      
-         
         <div class="inlineTemp grow">
         <form action="/workouts" method="POST">
         
@@ -23,8 +21,11 @@
         <p id="voting"> Likes: <span>{{ this.voting }}</span></p>
         <button type="submit" class="toWorkout">Add to workout</button>
         </form>
+  
         </div>
+        
         {{/each}}
+        
 </div>
 
 
