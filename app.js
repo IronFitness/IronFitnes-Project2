@@ -13,8 +13,6 @@ const bcrypt = require('bcryptjs');
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://heroku_jl0vc8f0:m5r4nhcibtrpj5vj91ie4aopdr@ds141783.mlab.com:41783/heroku_jl0vc8f0');
 
 
-
-
 const app = express();
 
 const flash = require('connect-flash');
