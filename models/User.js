@@ -9,11 +9,20 @@ const userSchema = new Schema({
     weight: Number,
     Size: Number,
     Age: Number,
+  
     role: {
         type: String,
         enum: ['Coach', 'Trainee'],
         default:'Trainee'
-    }
+    },
+    list:[
+       
+        {
+            
+        }
+               
+           ],
+    
 });
 
 const User = mongoose.model('User', userSchema);

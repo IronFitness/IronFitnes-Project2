@@ -8,7 +8,7 @@ const workoutSchema = new Schema({
     muscle: String,
     videoUrl: String,
     description: String,
-    voting: Number 
+    voting: Number
 })
 
 const Workout = mongoose.model('Workout', workoutSchema);

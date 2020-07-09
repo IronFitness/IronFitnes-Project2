@@ -4,9 +4,11 @@ const loginCheck = require('./middleware')
 
 /* GET home page. */
 router.get('/', loginCheck(), (req, res, next) => {
+  console.log("hola")
   console.log(req.user);
   const user = req.user;
   console.log('req.user:', req.user);
+
   res.render('index', {user: user});
 });
 
