@@ -1,20 +1,34 @@
-<h2>Add a new Workout</h2>
+
+
+  <div class="viewForm bgNew">
+
+    <h1>Add a new Workout</h1>
+    <div  class="newContainer">
 
 <form action="/workouts/new" method="POST"\>
-  <label for="exercise">Exercise</label> 
-  <input id="exercise" type="text" name="exercise">
-  
+
+
+  <p> Please Typ the name of your Exercis </p>
+  <input class="newInpurt" id="exercise" type="text" name="exercise" placeholder="Exercise">
+  <div>  
+
+<div>
+  <p>Make it easy for the others and set the difficulty</p>
   <label for="difficulty">Difficulty</label> 
 <select id="difficulty" name="difficulty" form="difficulty">
   <option value="easy">easy</option>
   <option value="medium">medium</option>
   <option value="hard">hard</option>
 </select>
-
-  <input id="difficulty" type="text" name="difficulty">
+</div>
   
-  <label for="repetitions">repetitions</label> 
-  <input id="repetitions" type="number" name="repetitions">
+
+  <div>
+     <input class="newInpurt" id="repetitions" type="number" name="repetitions" placeholder="Repetitions">
+  </div>
+
+  <div>
+  <p> Enter which muscle group is being used </p>
   
     <label for="muscle">Workout-type</label> 
     <select id="difficulty" name="difficulty" form="difficulty">
@@ -26,13 +40,14 @@
     <option value="legs">Legs</option>
     <option value="calves">Calves</option>
     </select>
+    </div>
 
-    <label for="description">Description</label> 
-     <input id="description" type="text" name="description">
+    <div>
+     <input  class="newInpurt" id="description" type="text" name="description" placeholder="Description">
+    </div>
 
-
-  <button type="submit">Add</button>
+  <button class="addButton" type="submit">Add</button>
 </form>
 
-
-
+</div>
+</div>

@@ -1,37 +1,33 @@
+<div class="formSign">
+
+<h1>Sign Up</h1>
+
+
+<div>
 <form id="form" action="/auth/signup" method="POST">
 
-  <label for="username">Username</label><br />
-  <input type="text" name="username" />
+ 
+  <input class="logInput" type="text" name="username" placeholder="Username" />
 
-<br> 
-  <label for="password">Password</label><br />
-  <input type="password" name="password" />
-  <br> 
-  <label for="weight">Weight</label><br />
-  <input type="number" name="weight" />
-  <br> 
-  <label for="size">Size</label><br />
-  <input type="number" name="size" />
-    <br>
-    <br>
-    <label for="level">Workout-level</label> 
-    <select id="level" name="level" form="level">
+  <input class="logInput" type="password" name="password" placeholder="Password" />
+  <input class="logInput" type="number" name="weight" placeholder="Weight"/>
+  <input class="logInput" type="number" name="size" placeholder="Size" />
+  
+    <label class="logInput" for="level">Workout-level</label> 
+    <select class="logInput" id="level" name="level" form="level">
     <option value="Beginner">Beginner</option>
     <option value="Intermediate">Intermediate</option>
     <option value="Professional">Professional</option>
     </select>
 
-
-
-
   {{#if message}}
   <div class="error-message">{{message}}</div>
   {{/if}}
 
-<br>
-<br>
-  <button type="submit">Sign up</button>
+  <button class="logInput" type="submit">Sign up</button>
+  <button class="logInput"> <a  href="/">Login</a> </button>
+  
 </form>
 
-<br>
-<a href="/">Login</a>
+</div>
+</div>
