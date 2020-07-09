@@ -16,7 +16,7 @@ body {
 
 /* Add a black background color to the top navigation */
 .navbar {
-  background-color: #333;
+  background-color: grey;
   overflow: hidden;
 }
 
@@ -288,5 +288,40 @@ body {
   width: 500px;
   background-color: #fff;
   opacity: 0.7;
+}
+
+
+.labelw{
+  padding-left: 140px;
+}
+
+/* Homepage */
+
+#logout{
+  float: right;
+  color: red;
+}
+
+.pageWel > h1 {
+  text-align: center;
+  margin-top: 100px;
+  font-size: 40px;
+}
+
+.pageWel > p { 
+  text-align: center;
+  font-size: 30px;
+}
+
+
+.welDiv{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.welDiv2 {
+  display: flex;
+  justify-content: center;
 }
 
