@@ -1,7 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const Workout = require('../models/Workout');
+const User= require("../models/User")
 const { default: Axios } = require('axios');
+const loginCheck = require('./middleware')
+
 
 router.get('/workouts', (req, res, next) => {
     console.log("workouts user", req.user);
@@ -64,7 +67,46 @@ router.get('/new', (req, res, next) => {
     res.render('workouts/new' , {user});
 });
 
-// <!-- routes or Worout voting --> 
+//List of exercises for workout get request
+// router.get("/workouts" /*was macht das?*/, (req, res) => {
+//     console.log("hello")
+//     const workoutList = req.user.workouts;
+
+//     const user=req.user; 
+//   Workout.findOne({exercise
+//     :
+//     "Bizeps Curls"
+//     }).then(response=>{
+//         console.log("this is a workout!!!!!!!!",response,"this is a workout!!!!!")
+//     }).catch(err=>{
+//         console.log("this is an error!!!",err)
+//     })
+
+//      res.render('workouts' , {workoutList, user: user})
+//   }); 
+
+router.post("/workouts", loginCheck(), (req, res) => {
+   
+   let exercise= req.body
+ let user=req.user._id
+ 
+
+ console.log("HOla Luisito")
+
+User.findByIdAndUpdate(user, {$push:{list: exercise}}).then(
+    
+    userFound => {console.log("user founded luisito")
+     console.log(userFound)
+    res.redirect("/")
+    //   res.render('workoutList',{workoutList, user: user})
+    }).catch(err => {
+      
+      //  console.log(err)
+    })
+  });
+
+
+// <!-- routes or Workout voting --> 
 
 router.post("/vote/:id", (req, res) => {
 
