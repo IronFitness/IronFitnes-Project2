@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{title}}</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+
+{{!-- Show navbar --}}
+    <div class="navbar">
+      {{#if user }}
+      <a href="/">Home</a>
+      <a href="/workouts">Workouts</a>  
+      <a href="/new">Add-Workouts</a>
+      {{else}}
+      {{!-- <a href="/auth/login">log in</a>
+      <a href="/auth/signup">sign up</a> --}}
+{{/if}}
+    </div>
+     
+
+
+   
+   
+    {{{body}}}
+
+  </body>
+</html>
