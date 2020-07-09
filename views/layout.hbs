@@ -12,13 +12,22 @@
 <!-- if user -show navBar -->
     
 
+
     <div class="navbar">
+      {{#if user }}
       <a href="/">Home</a>
       <a href="/workouts">Workouts</a>  
       <a href="/new">Add-Workouts</a>
+      {{else}}
+      {{!-- <a href="/auth/login">log in</a>
+      <a href="/auth/signup">sign up</a> --}}
+{{/if}}
     </div>
+     
 
 
+   
+   
     {{{body}}}
 
   </body>
