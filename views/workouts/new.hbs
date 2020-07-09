@@ -2,23 +2,23 @@
 
   <div class="viewForm bgNew">
 
-    <h1>Add a new Workout</h1>
+    <h1>Add a new Exercise</h1>
     <div  class="newContainer">
 
 <form action="/workouts/new" method="POST"\>
 
 
-  <p> Please Typ the name of your Exercis </p>
+  <p> Please Type the Name of your Exercise </p>
   <input class="newInpurt" id="exercise" type="text" name="exercise" placeholder="Exercise">
   <div>  
 
 <div>
-  <p>Make it easy for the others and set the difficulty</p>
-  <label for="difficulty">Difficulty</label> 
+  <p>Set the difficulty for others </p>
+  <label class="labelw" for="difficulty">Difficulty</label> 
 <select id="difficulty" name="difficulty" form="difficulty">
-  <option value="easy">easy</option>
-  <option value="medium">medium</option>
-  <option value="hard">hard</option>
+  <option value="easy">Easy</option>
+  <option value="medium">Medium</option>
+  <option value="hard">Hard</option>
 </select>
 </div>
   
@@ -28,9 +28,11 @@
   </div>
 
   <div>
-  <p> Enter which muscle group is being used </p>
+
+  <p> Enter which Muscle Group is engaged </p>
   
-    <label for="muscle">Workout-type</label> 
+    <label class="workoutType" for="muscle">Muscle-Group</label> 
+
     <select id="difficulty" name="difficulty" form="difficulty">
     <option value="chest">Chest</option>
     <option value="arms">Arms</option>
