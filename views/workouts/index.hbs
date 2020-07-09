@@ -5,19 +5,28 @@
 </div>
 
 <div class="wourkoutTemp">
-  
-{{#each workouts}}
 
-<div class="inlineTemp grow">
-<h2>{{this.exercise}}</h2>
-<p><a href="/workouts/{{ this._id }}">See Details</a></p>
- 
-<p><button class="toWorkout">Add to workout</button></p>
+          
+        {{#each workouts}}
+      
+         
+        <div class="inlineTemp grow">
+        <form action="/workouts" method="POST">
+        
+        <h2>{{this.exercise}}</h2>
+        <p><a href="/workouts/{{ this._id }}">See Details</a></p>
+
+        <input type="text" name="exercise" value="{{this.exercise}}" style= "display:none">
+        <input type="text" name="id" value="{{ this._id }}" style= "display:none">
+       
+       
+        <button type="submit" class="toWorkout">Add to workout</button>
+        </form>
+        </div>
+        {{/each}}
+
 </div>
 
-{{/each}}
-
-</div>
 
 <p><a href="/">Back Home</a> </p>
 <p> <a href="/new">New Workout</a> </p>
