@@ -94,4 +94,21 @@ body {
  transform: scale(1.2);
 }
 
+/* Log-In Style */
+
+.logIn{ 
+  width: 400px;
+  height: 400px;
+  background-color: grey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.loginForm { 
+  display: table;
+  height: 100%;
+  margin: 0 auto;
+}
 
