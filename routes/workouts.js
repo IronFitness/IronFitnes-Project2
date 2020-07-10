@@ -22,6 +22,7 @@ router.post('/workouts/new', (req, res, next) => {
     const { exercise, difficulty, repetitions, muscle, description } = req.body;
     Workout.create({ exercise, difficulty, repetitions, muscle, description, voting: 0 })
         .then((newWorkout) => {
+            console.log(newWorkout);
             res.redirect(`/workouts/${newWorkout._id}`);
         })
         .catch(err => {
