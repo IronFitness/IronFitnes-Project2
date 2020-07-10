@@ -94,7 +94,7 @@ router.post("/workouts", loginCheck(), (req, res) => {
 
  console.log("HOla Luisito")
 
-User.findByIdAndUpdate(user, {$push:{list: exercise}}).then(
+User.findByIdAndUpdate(user, {$push:{list: exercise.id}}).then(
     
     userFound => {console.log("user founded luisito")
      console.log(userFound)
@@ -128,5 +128,14 @@ router.post("/vote/:id", (req, res) => {
     })
   })
   
+router.delete("/deleteExercise/:id",(req,res)=>{
+    const userId=req.user._id
+    console.log(req.params.id)
+    User.findByIdAndUpdate(req.user._id,{$pull:{list:req.params.id}}).then(responseDB=>{
+        console.log("done",responseDB)
+    }).catch(err=>{
+        console.log("mistakes were made",err)
+    })
+})
 
   module.exports = router;
