@@ -1,9 +1,13 @@
 
-<div class="pageWel">
+<div class="pageWel welcomeImg">
 
-<h1>Welcome to IronFitness</h1>
+<h1>Welcome to IronFitness <span>💪</span> </h1>
+<h2> Time to get in shape <span>💯</span>!</h2>
 
-<p>Sign up for free and create your own workout, get inspired by others and motivate yourself!</p>
+<div class="indexintro">
+    <p>Find new exercises and create your own workout, get inspired and motivate yourself!</p>
+</div>
+
 
 {{#each user.list}}
    <a href="/workouts/{{this.id}}"> <p>{{this.exercise}}</p></a>
@@ -12,11 +16,11 @@
 
 
 <div class="welDiv">
-<p> Welcome {{#if user}}{{user.username}}{{/if}} </p>
+<p> Hey {{#if user}}{{user.username}}, great to have you on board. {{/if}} </p>
 </div>
 
 <div class="welDiv2 marwelDiv2">
-<h3>Hey {{user.username}}, here are yourlisted workouts:</h3>
+<h3> Here is your individual workout:</h3>
 </div>
 
    
