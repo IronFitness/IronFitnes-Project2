@@ -6,7 +6,7 @@ const User = require('../models/User');
 const passport = require('passport');
 
 router.get('/signup', (req, res) => {
-    // console.log("hello");
+    console.log("hello");
     res.render('auth/signup');
 });
 
@@ -77,7 +77,8 @@ router.post('/signup', (req, res, next) => {
                     if (err) next(err);
                     else res.redirect('/');
             });
-            res.redirect('login');
+            console.log("hello")
+           // res.redirect('login');
     })
     .catch(err => {
         next(err);
