@@ -1,67 +1,81 @@
-<h2>Exercise Details</h2>
-<div>
-<p>Name: {{ workouts.exercise }} </p>
-<p>Difficulty: {{ workouts.difficulty }}  </p>
-<p>Repetitions: {{ workouts.repetitions }}  </p>
-<p>Muscle-Group:  {{ workouts.muscle }} </p>
-<p>Description: {{ workouts.description }} </p>
-<p id="voting">Voting: <span>{{ workouts.voting }}</span></p>
+<div class="detailsPage backgroundImg">
+  
+  
+  <h2>Exercise Details</h2>
+<div class="oldContainer">
+  
+    
+    <div>
+     <div class="labela">
+      <div class="font">
+          
+        <p>Name: {{ workouts.exercise }} </p>
+  
+        <p>Difficulty: {{ workouts.difficulty }}  </p>
+        <p>Repetitions: {{ workouts.repetitions }}  </p>
+        <p>Muscle-Group:  {{ workouts.muscle }} </p>
+        <p>Description: {{ workouts.description }} </p>
+        <p id="voting">Likes: <span>{{ workouts.voting }}</span></p>
+        
+      </div>
+     
+    
+    <button class="upVote votbut" id={{workouts._id}} voting={{workouts.voting}}>Like</button>
+    <button class="downVote votbut" id={{workouts._id}} voting={{workouts.voting}}>Dislike</button>
+    
+    
+    </div>
+    
+    <div class="labelq">
+        <form action="/workouts/delete/{{ workouts._id }}" method="POST">
+        <button type="submit">Delete exercise</button>
+        </form>
+    
+    <button>  <a style="text-decoration: none; color: black;" href="/workouts"> Back to Workouts</a>  </button>
+    
+    </div>
+    
+    {{!-- Voting functionality --}}
+    
+    
+    
+    <script>
+      // Button for Voting Up
+    document.querySelector(".upVote").onclick=(e)=>{
+      console.log("cheese is awsome")
+      let id=e.target.id
+      //axios
+      axios.post(`/vote/${id}`).then(response=>{
+    let votingNumber=document.querySelector("#voting >span").innerText
+    let newNumber=parseFloat(votingNumber)+1    
+    document.querySelector("#voting >span").innerText=newNumber
+    
+    console.log(response)
+      })
+    }
+    
+    // Button for Down Voting
+    
+    document.querySelector(".downVote").onclick=(e)=>{
+      console.log("cheese is down-awsome")
+      let id=e.target.id
+      axios.post(`/vote/${id}`).then(response=>{
+    let votingNumber=document.querySelector("#voting >span").innerText
+    let newNumber=parseFloat(votingNumber)-1    
+    document.querySelector("#voting >span").innerText=newNumber
+    
+    console.log(response)
+      })
+    }
+    
+    
+    // Button going to Workouts page
+     
+    
+    </script>
 
-
-<button class="upVote votbut" id={{workouts._id}} voting={{workouts.voting}}>Up </button>
-<button class="downVote votbut" id={{workouts._id}} voting={{workouts.voting}}>Down</button>
-
-
-</div>
-
-<div>
-    <form action="/workouts/delete/{{ workouts._id }}" method="POST">
-    <button type="submit">Delete</button>
-    </form>
-
-<button>  <a style="text-decoration: none; color: black;" href="/workouts"> Back to Workouts</a>  </button>
-
-</div>
-
-{{!-- Voting functionality --}}
-
-
-
-<script>
-  // Button for Voting Up
-document.querySelector(".upVote").onclick=(e)=>{
-  console.log("cheese is awsome")
-  let id=e.target.id
-  //axios
-  axios.post(`/vote/${id}`).then(response=>{
-let votingNumber=document.querySelector("#voting >span").innerText
-let newNumber=parseFloat(votingNumber)+1    
-document.querySelector("#voting >span").innerText=newNumber
-
-console.log(response)
-  })
-}
-
-// Button for Down Voting
-
-document.querySelector(".downVote").onclick=(e)=>{
-  console.log("cheese is down-awsome")
-  let id=e.target.id
-  //axios
-  axios.post(`/vote/${id}`).then(response=>{
-let votingNumber=document.querySelector("#voting >span").innerText
-let newNumber=parseFloat(votingNumber)-1    
-document.querySelector("#voting >span").innerText=newNumber
-
-console.log(response)
-  })
-}
-
-
-// Button going to Workouts page
- 
-
-</script>
-
+  </div>
+</div> 
+</div> 
 
 
