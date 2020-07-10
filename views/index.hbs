@@ -9,9 +9,6 @@
 </div>
 
 
-
-
-
 <div class="welDiv">
 <p> Hey {{#if user}}{{user.username}}, great to have you on board. {{/if}} </p>
 </div>
@@ -23,12 +20,16 @@
    
 <div class="welDiv">
 {{#each user.list}}
+
+   <a style="text-decoration: none; color: red;" href="/workouts/{{this.id}}"> <p>{{this.exercise}}</p></a>
+
 <div id="N{{this.id}}" >
   <a style="text-decoration: none; color: white; height: 40px," href="/workouts/{{this.id}}"> <p>{{this.exercise}}</p></a>
 
 <button class="deleter" id="{{this.id}}" onclick="delete"> delete</button>
 </div>
  
+
 {{/each}}
 
 <script>

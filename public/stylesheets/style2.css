@@ -67,3 +67,11 @@
     margin-top: 100px;
 }
 
+.iconNav{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    float: left;
+    margin: 10px 10px 0 10px;
+
+}
