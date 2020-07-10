@@ -42,62 +42,6 @@ body {
   color: white;
 }
 
-
-/* Worksouts View */
-
-.wourkoutTemp{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-}
-
-
-
-.inlineTemp{
-  width: 200px;
-  height: 150px;
-}
-
-.inlineTemp > h2 {
-  text-align: center
-}
-
-
-.inlineTemp > p {
-  text-align: center
-}
-
-.workoutspage{
-  background-image: url(../images/workout.jpg);
-  height: 400px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-
-.workoutspage > h2 {
-  text-align: center;
-  margin-top: 0;
-  padding: 300px 0 0 0;
-  color: white;
-  font-size:4em;
-}
-
-.inlineTemp {
-  background-color: grey;
-  width: 30%;
-  height: 300px;
-  margin: 40px 10px 10px 40px;
-  
-}
-
-.grow:hover{ 
- transform: scale(1.2);
-}
-
 /* Log-In Style */
 
 .logIn{

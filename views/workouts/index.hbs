@@ -2,40 +2,41 @@
 
 <h2> Workout Exercices</h2>
 
-</div>
+
+<div class="wourkoutTemp row" >
 
 
-<div >
-<div class="wourkoutTemp" >
- 
+<br>
           
         {{#each workouts}}
-        <div class="inlineTemp grow">
-        <form action="/workouts" method="POST">
+    <div class="col-md-4 grow">
+        <form id="formWork" action="/workouts" method="POST">
         
         <h2 style="text-align: center;">{{this.exercise}}</h2>
-        <p style="text-align: center;"><a class="links" style="text-decoration: none; color: black;"  href="/workouts/{{ this._id }}">See Details</a></p>
+        <p style="text-align: center;"> <a class="links " style="text-decoration: none; color: black;"  href="/workouts/{{ this._id }}">See Details</a> </p>
 
         <input type="text" name="exercise" value="{{this.exercise}}" style= "display:none">
         <input type="text" name="id" value="{{ this._id }}" style= "display:none">
-       
-
-        <label class="bWork"   class="workoutType" for="muscle">Muscle-Group: <span>{{ this.muscle }}</span></label> 
         <p style="text-align: center;" id="voting"> Likes: <span>{{ this.voting }}</span></p>
-
        
-        <button class="bWork" type="submit" class="toWorkout">Add to workout</button>
+
+        <label style=" vertical-align: middle;"    class="workoutType" for="muscle">Muscle-Group: <span>{{ this.muscle}}</span></label> 
+        <button  type="submit" class="toWorkout">Add to workout</button>
+        
 
         </form>
   
+
+            </div>
+    
+          {{/each}}
+
         </div>
-        
-        {{/each}}
-        
-</div>
-</div>
 
+   
 
-<p><a style="text-decoration: none; color: black;" href="/">Back Home</a> </p>
-<p> <a style="text-decoration: none; color: black;" href="/new">New Workout</a> </p>
+<div class="col-md-4 bWorOr" >
+ <button class="bWorkout"  ><a style="text-decoration: none; color: black;" href="/">Back Home</a></button>
+ <button class="bWorkout" > <a style="text-decoration: none; color: black;" href="/new">New Workout</a></button>
+</div>
 
