@@ -271,6 +271,7 @@ text-align: center;
 .welDiv{
   display: flex;
   text-align: center;
+  flex-direction: column;
   justify-content: center;
   font-size: 35px;
   color: white;
